@@ -112,7 +112,7 @@ max-width: 100%;
 
 .portfolio-img-div {
     text-align: center;
-    animation: drop-in 1500ms;
+    /* animation: drop-in 1500ms; */
 }
 
 .navbar-btns {
@@ -131,7 +131,6 @@ max-width: 100%;
 
 .portfolio-picture-div {
     text-align: center;
-    animation: drop-in 1000ms;
 }
 
 .portfolio-picture {
