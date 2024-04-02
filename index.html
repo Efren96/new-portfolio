@@ -14,92 +14,112 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg container-1 sticky-top ">
-        <a href="#portfolio-img"><img class="nav-logo" src="./Images/Efren-Leal.svg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-btns collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav" id="navbar-nav">
-                    <a class="nav-item-one nav-link nav-link-fade-up" href="#about-me">About Me</a>
-                    <a class="nav-item-two nav-link nav-link-fade-up" href="#projects-section">Projects</a>
-                    <a class="nav-item-three nav-link nav-link-fade-up" href="#contact-slider">Contact</a>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg container-1 sticky-top  ">
+            <div>
+                <a href="#portfolio-img"><img class="nav-logo" src="./Images/Efren-Leal.svg">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            </div>
+            <div class="navbar-btns collapse navbar-collapse" >
+                <ul class="menu">
+                    <div class="navbar-nav menu" id="navbar-nav">
+                        <li><a class="nav-item-one nav-link nav-link-fade-up" href="#about-me">About Me</a></li>
+                        <li></li><a class="nav-item-two nav-link nav-link-fade-up" href="#projects-section">Projects</a>
+                        </li>
+                        <li></li><a class="nav-item-three nav-link nav-link-fade-up" href="#contact-slider">Contact</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="right-navbar">
+                <a href="https://www.linkedin.com/in/efren-leal/" target="_blank"><img class="in-logo"
+                        src="./Images/linkedin-logo.svg"></a>
+                <a href="https://github.com/Efren96?tab=repositories" target="_blank"><img class="in-logo"
+                        src="./Images/github-logo.svg"></a>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            </div>
+        </nav>
+    </header>
+    <section class="main-content">
+        <div class="portfolio-img-div" id="portfolio-img">
+            <img class="portfolio-logo" src="./Images/new portfolio logo (1200 x 420 px).png" alt="my-portfolio-logo">
+        </div>
+        <div class="portfolio-picture-div">
+            <img class="portfolio-picture" id="about-me" src="./Images/Portfolio-2.svg" alt="my-portfolio-logo">
+        </div>
+        <div class="projects-section" id="projects-section">
+            <h2 class="projects-banner">Projects</h2>
+        </div>
+        <div class="projects-slider">
+            <div class="card">
+                <img class="card-image" src="./Images/vetech-poster.jpg">
+                <div class="card-body">
+                    <h1 class="card-title">VetTech</h1>
+                    <p class="card-sub-title">Seamlessly manage and access information about pets and their owners. <br>
+                        (Login info: <br> E-mail: user@vettech.com <br> Password: BarkMeow123 )
+                    </p>
+                    <a href="https://vet-tech-app-57f56dec96cd.herokuapp.com/login" target="_blank">
+                        <button class="card-btn">Visit Site</button></a>
                 </div>
             </div>
-            <a href="https://www.linkedin.com/in/efren-leal/" target="_blank"><img class="in-logo"
-                    src="./Images/linkedin-logo.svg"></a>
-            <a href="https://github.com/Efren96?tab=repositories" target="_blank"><img class="in-logo"
-                    src="./Images/github-logo.svg"></a>
-    </nav>
-    <div class="portfolio-img-div" id="portfolio-img">
-        <img class="portfolio-logo" src="./Images/new portfolio logo-2.svg" alt="my-portfolio-logo">
-    </div>
-    <div class="portfolio-picture-div">
-        <img class="portfolio-picture" id="about-me" src="./Images/Portfolio-2.svg" alt="my-portfolio-logo">
-    </div>
-    <div class="projects-section" id="projects-section">
-        <h2 class="projects-banner">Projects</h2>
-    </div>
-    <div class="projects-slider">
-        <div class="card">
-            <img class="card-image" src="./Images/vetech-poster.jpg">
-            <div class="card-body">
-                <h1 class="card-title">VetTech</h1>
-                <p class="card-sub-title">Seamlessly manage and access information about pets and their owners. <br> (Login info: <br> E-mail: user@vettech.com <br> Password: BarkMeow123 )
-                </p>
-                <a href="https://vet-tech-app-57f56dec96cd.herokuapp.com/login" target="_blank">
-                    <button class="card-btn">Visit Site</button></a>
+            <div class="card">
+                <img class="card-image" src="./Images/Movie go poster 3.jpg">
+                <div class="card-body">
+                    <h1 class="card-title">Movie Go+</h1>
+                    <p class="card-sub-title">MovieGo+ offers users a seamless movie browsing experience with the
+                        ability to
+                        add movies to a "Watch Later" playlist, with a sleek and user-friendly interface designed to
+                        enhance
+                        engagement and satisfaction.</p>
+                    <a href="https://efren96.github.io/movies-to-watch-app/" target="_blank">
+                        <button class="card-btn">Visit Site</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-image" src="./Images/workday-poster.jpg">
+                <div class="card-body">
+                    <h1 class="card-title">Workday Scheduler</h1>
+                    <p class="card-sub-title">Schedule your day! </p>
+                    <a href="https://efren96.github.io/workday-scheduler-accessibility-revamp/" target="_blank">
+                        <button class="card-btn">Visit Site</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-image" src="./Images/weather-poster.jpg">
+                <div class="card-body">
+                    <h1 class="card-title">Weather Dashboard</h1>
+                    <p class="card-sub-title">5-day weather forecast app (work in progress)</p>
+                    <a href="https://efren96.github.io/weather-dashboard-application/" target="_blank">
+                        <button class="card-btn">Visit Site</button></a>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <img class="card-image" src="./Images/Movie go poster 3.jpg">
-            <div class="card-body">
-                <h1 class="card-title">MovieGo+</h1>
-                <p class="card-sub-title">MovieGo+ offers users a seamless movie browsing experience with the ability to add movies to a "Watch Later" playlist, with a sleek and user-friendly interface designed to enhance engagement and satisfaction.</p>
-                <a href="https://efren96.github.io/movies-to-watch-app/" target="_blank">
-                    <button class="card-btn">Visit Site</button></a>
+        <div class="projects-section">
+            <h2 class="projects-banner">Contact</h2>
+        </div>
+        <div class="contact-slider" id="contact-slider">
+            <div class="contact-div">
+                <img id="phone-img" src="./Images/phone-icon.svg" alt="Phone Icon Image">
+                <span class="phone-text">(713)-679-0177<span>
+            </div>
+            <div class="contact-div">
+                <img id="email-img" src="./Images/mail-icon.svg" alt="Mail Icon Image">
+                <span class="e-mail">efrenleal19@gmail.com</span>
+            </div>
+            <div class="contact-div">
+                <img id="github-img" src="./Images/linkedin-black-icon.svg" alt="Github Logo">
+                <span class="git-hub">linkedin.com/efren-leal</span>
             </div>
         </div>
-        <div class="card">
-            <img class="card-image" src="./Images/workday-poster.jpg">
-            <div class="card-body">
-                <h1 class="card-title">Workday Scheduler</h1>
-                <p class="card-sub-title">Schedule your day! </p>
-                <a href="https://efren96.github.io/workday-scheduler-accessibility-revamp/" target="_blank">
-                    <button class="card-btn">Visit Site</button></a>
-            </div>
+        <div class="thanks-img-div">
+            <img class="thanks-logo" src="./Images/Thanks for visiting!.svg" alt="my-portfolio-logo">
         </div>
-        <div class="card">
-            <img class="card-image" src="./Images/weather-poster.jpg">
-            <div class="card-body">
-                <h1 class="card-title">Weather Dashboard</h1>
-                <p class="card-sub-title">5-day weather forecast app (work in progress)</p>
-                <a href="https://efren96.github.io/weather-dashboard-application/" target="_blank">
-                    <button class="card-btn">Visit Site</button></a>
-            </div>
-        </div>
-    </div>
-    <div class="projects-section">
-        <h2 class="projects-banner">Contact</h2>
-    </div>
-    <div class="contact-slider" id="contact-slider">
-        <div class="contact-div">
-            <img id="phone-img" src="./Images/phone-icon.svg" alt="Phone Icon Image">
-            <span class="phone-text">(713)-679-0177<span>
-        </div>
-        <div class="contact-div">
-            <img id="email-img" src="./Images/mail-icon.svg" alt="Mail Icon Image">
-            <span class="e-mail">efrenleal19@gmail.com</span>
-        </div>
-        <div class="contact-div">
-            <img id="github-img" src="./Images/linkedin-black-icon.svg" alt="Github Logo">
-            <span class="git-hub">linkedin.com/efren-leal</span>
-        </div>
-    </div>
-    <div class="thanks-img-div">
-        <img class="thanks-logo" src="./Images/thanks.svg" alt="my-portfolio-logo">
-    </div>
+    </section>
 </body>
 
 </html>

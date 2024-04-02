@@ -6,11 +6,12 @@
 
 }
 
-body{
+
+.main-content{
     display: flex;
     flex-direction: column;
-flex-wrap: wrap;
-max-width: 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .navbar {
@@ -18,49 +19,57 @@ max-width: 100%;
     position: fixed;
     top: 0;
     width: 100%;
+    display: inline-flex;
+    box-shadow: 0px 2px 26px -5px rgb(0, 0, 0, 0.2);
 
 }
 
-.nav-item-one{
+.right-navbar {
+    display: inline-flex;
+}
+
+.nav-item-one {
     animation: drop-in 1000ms;
 }
 
-.nav-item-two{
+.nav-item-two {
     animation: drop-in 1500ms;
 }
 
-.nav-item-three{
+.nav-item-three {
     animation: drop-in 2000ms;
 }
 
 @keyframes drop-in {
     from {
-      transform:
-        rotate(-2deg) translateY(-100%);
-      opacity: 0;
+        transform:
+            rotate(-2deg) translateY(-100%);
+        opacity: 0;
     }
+
     to {
-      transform:
-        rotate(0deg) translateY(0%);
-      opacity: 1;
+        transform:
+            rotate(0deg) translateY(0%);
+        opacity: 1;
     }
-  }
+}
 
 .nav-logo {
     width: 240px;
-    animation: slide-in 1000ms;
+    -webkit-animation: slide-in 1000ms;
 }
 
 @keyframes slide-in {
     from {
-      transform: translateX(-100%);
-      opacity: 0.25;
+        transform: translateX(-100%);
+        opacity: 0.25;
     }
+
     to {
-      transform: translateX(0%);
-      opacity: 1;
+        transform: translateX(0%);
+        opacity: 1;
     }
-  }
+}
 
 .nav-link {
     font-size: 18px;
@@ -100,25 +109,34 @@ max-width: 100%;
 .portfolio-logo {
     width: 750px;
     margin-top: 130px;
-    animation: fade-out linear;
+    -webkit-animation: fadeOut linear;
     animation-timeline: view(100px 600px);
 
 }
-@keyframes fade-out {
-    from {scale: .9; opacity: 2;}
-     to { scale: 1.4; opacity: 1;}
-    
+
+@-webkit-keyframes fadeOut {
+    from {
+        scale: .9;
+        opacity: 2;
+    }
+
+    to {
+        scale: 1.4;
+        opacity: 1;
+    }
+
 }
 
 .portfolio-img-div {
     text-align: center;
     animation: drop-in 1500ms;
+
 }
 
 .navbar-btns {
     display: flex;
     justify-content: center;
-    margin-right: 100px;
+    margin-right: 125px;
 }
 
 .nav-link {
@@ -142,9 +160,16 @@ max-width: 100%;
 }
 
 @keyframes fade-in {
-    to {scale: 1.2; opacity: 0;}
-    from { scale: 1; opacity: 1;}
-    
+    to {
+        scale: 1.2;
+        opacity: 0;
+    }
+
+    from {
+        scale: 1;
+        opacity: 1;
+    }
+
 }
 
 .in-logo {
@@ -186,6 +211,7 @@ max-width: 100%;
     align-items: center;
     height: 250px;
 }
+
 #phone-img {
     /*phone icon image styling*/
     width: 100px;
@@ -257,15 +283,17 @@ max-width: 100%;
 
 @keyframes grow-and-shrink {
     0% {
-      transform: scale(.8);
+        transform: scale(.9);
     }
+
     50% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     100% {
-      transform: scale(.8);
+        transform: scale(.9);
     }
-  }
+}
 
 .thanks-img-div {
     text-align: center;
@@ -274,7 +302,7 @@ max-width: 100%;
 .card {
     width: 350px;
     height: 450px;
-    margin: 40px;
+    margin: 10px;
     justify-content: center;
     border-radius: 20px;
     transition: .2s;
@@ -304,8 +332,9 @@ max-width: 100%;
     top: 0;
     right: -100%;
     position: absolute;
-    background-color: rgb(43, 43, 43, .1);
-    backdrop-filter: blur(10px);
+    background-color: rgba(62, 62, 62, 0.382);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     color: white;
     font-family: "Sen";
     padding: 30px;
@@ -338,10 +367,154 @@ max-width: 100%;
     box-shadow: 0 8px 8px 0 rgb(0, 0, 0, 0.1);
 }
 
-.card-title{
+.card-title {
     font-family: "Sen";
 }
 
-.card-sub-title{
+.card-sub-title {
     font-family: "Sen";
+}
+
+
+
+
+
+
+
+
+
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+@media (min-width: 768px) {
+    .header li {
+        float: left;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+@media (max-width: 740px) {
+    .projects-slider {
+     flex-direction: column;
+     align-content: center;
+    }
+}
+/* .card{
+    width: 450px;
+    height: 550px;
+} */
+/* .navbar{
+    height: 100px;
+} */
+
+/* @media (max-width: 400px) {
+.card{
+    width: 600px;
+    height: 700px;
+    margin-bottom: 30px;
+} */
+/* .navbar{
+    height: 125px;
+} */
+/* .nav-logo {
+    width: 320px;
+} */
+
+/* .portfolio-logo {
+    margin-top: 175px;
+} */
+
+
+
+@media (max-width: 1177px) {
+    .nav-link {
+        font-size: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .navbar-btns{
+        margin-right: 80px;
+    }
+
+}
+
+@media (max-width: 1078px) {
+    .nav-link {
+        font-size: 15px;
+    }
+    .navbar-btns{
+        margin-right: 70px;
+    }
 }
