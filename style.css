@@ -7,7 +7,7 @@
 }
 
 
-.main-content{
+.main-content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -149,14 +149,16 @@
 
 .portfolio-picture-div {
     text-align: center;
-    animation: drop-in 1000ms;
+    animation: drop-in 1500ms;
 }
 
 .portfolio-picture {
     width: 1000px;
     margin-bottom: 50px;
-    animation: fade-in ease-in-out;
-    animation-timeline: view(0px 600px);
+    /* animation: fade-in ease-in-out; */
+    animation: fade-in cubic-bezier(1, -0.89, 0.69, 1.33);
+    ;
+    animation-timeline: view(0px 700px);
 }
 
 @keyframes fade-in {
@@ -188,7 +190,7 @@
     text-align: center;
     justify-content: center;
     color: white;
-    font-size: 25px;
+    /* font-size: 25px; */
     font-family: "Sen";
 }
 
@@ -381,14 +383,19 @@
 
 
 
-
-
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
 
 .header .menu-icon {
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 28px 20px;
+    padding: 30px 15px 20px 30px;
     position: relative;
     user-select: none;
 }
@@ -396,29 +403,31 @@
 .header .menu-icon .navicon {
     background: #333;
     display: block;
-    height: 2px;
+    height: 6px;
     position: relative;
     transition: background .2s ease-out;
-    width: 18px;
+    width: 50px;
+    border-radius: 3px;
 }
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-    background: #333;
+    background: #4152d8;
     content: '';
     display: block;
     height: 100%;
     position: absolute;
     transition: all .2s ease-out;
     width: 100%;
+    border-radius: 3px;
 }
 
 .header .menu-icon .navicon:before {
-    top: 5px;
+    top: 20px;
 }
 
 .header .menu-icon .navicon:after {
-    top: -5px;
+    top: -20px;
 }
 
 /* menu btn */
@@ -428,7 +437,7 @@
 }
 
 .header .menu-btn:checked~.menu {
-    max-height: 240px;
+    max-height: 600px;
 }
 
 .header .menu-btn:checked~.menu-icon .navicon {
@@ -448,8 +457,33 @@
     top: 0;
 }
 
+@media (max-width: 8000px) {
+    .projects-banner {
+        font-size: 25px;
+    }
+}
 
-@media (min-width: 768px) {
+@media (max-width: 1177px) {
+    .nav-link {
+        font-size: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .navbar-btns {
+        margin-right: 80px;
+    }
+
+}
+
+@media (max-width: 1078px) {
+
+    .navbar-btns {
+        margin-right: 60px;
+    }
+}
+
+@media (min-width: 990px) {
     .header li {
         float: left;
     }
@@ -464,57 +498,81 @@
         display: none;
     }
 }
+
+@media (max-width: 770px) {
+    .menu-icon {
+        padding: 40px 30px 20px 30px;
+    }
+}
+
+
 @media (max-width: 740px) {
     .projects-slider {
-     flex-direction: column;
-     align-content: center;
+        flex-direction: column;
+        align-content: center;
+    }
+
+
+    .card {
+        width: 450px;
+        height: 550px;
+    }
+
+    .navbar {
+        height: 100px;
     }
 }
-/* .card{
-    width: 450px;
-    height: 550px;
-} */
-/* .navbar{
-    height: 100px;
-} */
 
-/* @media (max-width: 400px) {
-.card{
-    width: 600px;
-    height: 700px;
-    margin-bottom: 30px;
-} */
-/* .navbar{
-    height: 125px;
-} */
-/* .nav-logo {
-    width: 320px;
-} */
-
-/* .portfolio-logo {
-    margin-top: 175px;
-} */
-
-
-
-@media (max-width: 1177px) {
-    .nav-link {
-        font-size: 20px;
-        margin-left: 40px;
-        margin-right: 40px;
+@media (max-width: 450px) {
+    .card {
+        width: 750px;
+        height: 850px;
+        margin-bottom: 30px;
     }
 
-    .navbar-btns{
-        margin-right: 80px;
+    .projects-banner {
+        height: 85px;
+        align-items: center;
+        font-size: 40px;
     }
 
-}
-
-@media (max-width: 1078px) {
-    .nav-link {
-        font-size: 15px;
+    .navbar {
+        height: 125px;
     }
-    .navbar-btns{
-        margin-right: 70px;
+
+    .nav-logo {
+        width: 330px;
+    }
+
+    .portfolio-logo {
+        margin-top: 200px;
+    }
+
+    .in-logo {
+        width: 65px;
+        margin: 15px;
+    }
+
+    .menu-icon {
+        padding: 40px 30px 20px 30px;
+        margin-top: 13px;
+    }
+
+    .card-title {
+        font-size: 75px;
+    }
+
+    .card-sub-title {
+        font-size: 30px;
+    }
+
+    .card-btn {
+        width: 200px;
+        height: 65px;
+        font-size: 25px;
+    }
+
+    .card-body {
+        backdrop-filter: blur(18px);
     }
 }
