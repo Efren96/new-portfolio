@@ -236,9 +236,9 @@
 
 #github-img {
     /*github logo image styling*/
-    width: 100px;
-    height: 100px;
-    margin: 40px 40px 10px 40px;
+    width: 95px;
+    height: 95px;
+    margin: 40px 40px 40px 40px;
     justify-content: center;
 }
 
@@ -527,7 +527,7 @@
     .card {
         width: 750px;
         height: 850px;
-        margin-bottom: 30px;
+        margin-bottom: 55px;
     }
 
     .projects-banner {
@@ -554,7 +554,7 @@
     }
 
     .menu-icon {
-        padding: 40px 30px 20px 30px;
+        padding: 30px 25px 8px 21px;
         margin-top: 13px;
     }
 
@@ -568,11 +568,50 @@
 
     .card-btn {
         width: 200px;
-        height: 65px;
-        font-size: 25px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .card-btn:hover {
+        width: 200px;
+        height: 70px;
+        font-size: 30px;
     }
 
     .card-body {
-        backdrop-filter: blur(18px);
+        backdrop-filter: blur(20px);
+    }
+
+    #phone-img{
+        width: 140px;
+        height: 140px; 
+    }
+
+    #email-img{
+        width: 140px;
+        height: 140px; 
+        margin: 40px 40px 10px 55px
+    }
+
+    #github-img{
+        width: 140px;
+        height: 140px; 
+    }
+
+    .phone-text{
+        font-size: 25px;
+    }
+
+    .e-mail{
+        font-size: 25px;
+    }
+
+    .git-hub{
+        margin: 40px 40px px 40px;
+
+    }
+
+    .thanks-logo{
+        width: 375px;
     }
 }
